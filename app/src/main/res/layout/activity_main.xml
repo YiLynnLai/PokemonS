@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maina1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/pokemon_logo"
+        tools:ignore="InvalidId" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="411dp"
+        android:layout_below="@+id/iv_head"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/regist_username"
+            android:layout_width="411dp"
+            android:layout_height="265dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/layout">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginBottom="167dp"
+                android:text="Trainer Name"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="200dp"
+                android:hint="Hey,I'm Professor Samuel Oak！What's your name?Please type your name here!"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/regist_psw"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:layout_margin="0dp">
+
+            <EditText
+                android:id="@+id/et_psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:hint="Don not tell anyone this!"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/tv_psw"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginBottom="167dp"
+                android:text="Password"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/layout"
+        android:layout_marginRight="-0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:background="@drawable/sprite" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/layout"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/white"
+        android:text="GO!"
+        android:textColor="@android:color/black"
+        android:textSize="25dp" />
+
+</RelativeLayout>
